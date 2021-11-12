@@ -1,0 +1,17 @@
+.home{
+    background-image: url('../../images/Bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    
+    
+}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+
+
