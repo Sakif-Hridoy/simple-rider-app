@@ -1,0 +1,5 @@
+[{"id":1,"uuid":"6465d46facv","image":"https://i.ibb.co/YjXmfBg/bike.png","vehicle_type":"Bike", "regular":"20", "premium":"45", "vip":"80"},
+    {"id":2,"uuid":"646546fdacv","image":"https://i.ibb.co/4SHXGsh/car.png","vehicle_type":"Car", "regular":"30", "premium":"65" , "vip":"120"},
+    {"id":3,"uuid":"64654df6facv","image":"https://i.ibb.co/94YG1gy/bus.png","vehicle_type":"Bus", "regular":"15", "premium":"30" , "vip":"40"},
+    {"id":4,"uuid":"64654sdf6facv","image":"https://i.ibb.co/6wWMWft/train.png","vehicle_type":"Train", "regular":"35", "premium":"45", "vip":"70" }
+    ]
