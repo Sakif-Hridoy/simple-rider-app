@@ -12,25 +12,33 @@ import Destination from './Component/Destination/Destination';
 import Blog from './Component/Blog/Blog';
 import Contact from './Component/Contact/Contact';
 import Login from './Component/Login/Login';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import Search from './Component/Search/Search';
+import NotFound from './Component/NotFound/NotFound';
+import { createContext, useState } from 'react';
 
-
+export const userContext = createContext();
 function App(){
-
+const  [loggedInUser,setLoggedInUser]=useState({displayName:'Login'});
 
   return(
+<userContext.Provider value={[loggedInUser,setLoggedInUser]}>
     <div>
       <Header></Header>
 <Router>
       <Switch>
+        <Route exact path="/">
+        <Home></Home>
+        </Route>
         <Route path="/home">
         <Home></Home>
          </Route>
-         <Route path="/destination">
+         <PrivateRoute path="/destination/:vehicleType">
         <Destination></Destination>
-        </Route>
-         {/* <PrivateRoute path="/book/:type">
-          <Book></Book>
-          </PrivateRoute> */}
+        </PrivateRoute>
+          <PrivateRoute path="/destination/">
+          <Search></Search>
+          </PrivateRoute>
           <Route path="/blog">
           <Blog></Blog>
         </Route>
@@ -40,12 +48,13 @@ function App(){
         <Route path="/login">
           <Login></Login>
         </Route >
-        <Route exact path="/">
-        <Home />
-        </Route>
+        <Route path="*">
+            <NotFound></NotFound>
+          </Route>
       </Switch>
 </Router>
     </div>
+    </userContext.Provider>
   );
 }
 

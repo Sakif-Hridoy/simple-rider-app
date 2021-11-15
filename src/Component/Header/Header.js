@@ -1,11 +1,14 @@
 import Button from '@restart/ui/esm/Button';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { userContext } from '../../App';
 import './Header.css';
 
+
 const Header = () => {
+  const [loggedInUser,setLoggedInUser] = useContext(userContext);
   // const history = useHistory();
   const handleLogin = ()=>{
     <Link to="/login"></Link>
