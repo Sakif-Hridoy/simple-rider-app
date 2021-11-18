@@ -1,0 +1,27 @@
+body{
+    background-image: url(../../images/Bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form{
+   border: 5px solid maroon;
+   border-radius: 15px;
+
+}
+
+.heading{
+    margin-left: 80px;
+}
+
+.button1{
+    margin-left: 128px;
+    margin-bottom: 10px;
+}
+.or{
+    margin-left: 70px;
+}
+.button2{
+    margin-left: 80px;
+    margin-bottom: 20px;
+}

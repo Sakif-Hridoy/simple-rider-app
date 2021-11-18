@@ -1,17 +1,18 @@
-import Button from '@restart/ui/esm/Button';
 import React, { useContext } from 'react';
 import { Container, Nav } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
-import { userContext } from '../../App';
+import { useHistory } from 'react-router';
+import { UserContext } from '../../App';
 import './Header.css';
+import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 
 const Header = () => {
-  const [loggedInUser,setLoggedInUser] = useContext(userContext);
-  // const history = useHistory();
+  const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+  const history = useHistory();
   const handleLogin = ()=>{
-    <Link to="/login"></Link>
+    history.push('/login');
   }
     return (
         <div>
@@ -29,7 +30,8 @@ const Header = () => {
       <Nav.Link to=""className="nav-pad" href="/destination">Destination</Nav.Link>
       <Nav.Link to=""className="nav-pad" href="/blog">Blog</Nav.Link>
       <Nav.Link to=""className="nav-pad" href="/contact">Contact</Nav.Link>
-      <Button onClick={handleLogin} type="button" variant="outline-success">Login</Button>
+      <Button variant="outline-success" href="/login">Login</Button>
+      
       {/* <Button onClick={handleLogin} variant="outline-success">Login</Button>
       <Button variant="outline-success">Login</Button> */}
       {/* <LinkContainer to="/login"><Button variant="outline-success">Login</Button></LinkContainer> */}

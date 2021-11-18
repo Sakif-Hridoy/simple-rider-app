@@ -17,12 +17,12 @@ import Search from './Component/Search/Search';
 import NotFound from './Component/NotFound/NotFound';
 import { createContext, useState } from 'react';
 
-export const userContext = createContext();
+export const UserContext = createContext();
 function App(){
-const  [loggedInUser,setLoggedInUser]=useState({displayName:'Login'});
+const  [loggedInUser,setLoggedInUser]=useState({});
 
   return(
-<userContext.Provider value={[loggedInUser,setLoggedInUser]}>
+<UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
     <div>
       <Header></Header>
 <Router>
@@ -54,7 +54,7 @@ const  [loggedInUser,setLoggedInUser]=useState({displayName:'Login'});
       </Switch>
 </Router>
     </div>
-    </userContext.Provider>
+    </UserContext.Provider>
   );
 }
 
