@@ -25,3 +25,8 @@ body{
     margin-left: 80px;
     margin-bottom: 20px;
 }
+.toggleSign{
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 10%;
+}

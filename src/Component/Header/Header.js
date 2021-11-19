@@ -30,7 +30,7 @@ const Header = () => {
       <Nav.Link to=""className="nav-pad" href="/destination">Destination</Nav.Link>
       <Nav.Link to=""className="nav-pad" href="/blog">Blog</Nav.Link>
       <Nav.Link to=""className="nav-pad" href="/contact">Contact</Nav.Link>
-      <Button variant="outline-success" href="/login">Login</Button>
+      <Button variant="outline-success" href="/login">{}</Button>
       
       {/* <Button onClick={handleLogin} variant="outline-success">Login</Button>
       <Button variant="outline-success">Login</Button> */}
