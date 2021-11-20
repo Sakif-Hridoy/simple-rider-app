@@ -43,8 +43,8 @@ function Login() {
   }
 
   const handleResponse = (res,redirect)=>{
-      setUser(res.user);
-      setLoggedInUser(res.user);
+      setUser(res);
+      setLoggedInUser(res);
       if(redirect){
         history.replace(from);
       }
