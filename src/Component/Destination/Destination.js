@@ -1,9 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router';
+import Search from './../Search/Search';
 
 const Destination = () => {
+    const {vehicleType} = useParams();
     return (
         <div>
-            <h1>The Destination Feature is Coming Soon.Please Stay with us</h1>
+            <Search vehicleType={vehicleType}></Search>
         </div>
     );
 };

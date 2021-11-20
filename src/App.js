@@ -16,6 +16,9 @@ import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import Search from './Component/Search/Search';
 import NotFound from './Component/NotFound/NotFound';
 import { createContext, useState } from 'react';
+import NoSelect from './Component/NoSelect/NoSelect';
+
+
 
 export const UserContext = createContext();
 function App(){
@@ -36,9 +39,9 @@ const  [loggedInUser,setLoggedInUser]=useState({});
          <PrivateRoute path="/destination/:vehicleType">
         <Destination></Destination>
         </PrivateRoute>
-          <PrivateRoute path="/destination/">
-          <Search></Search>
-          </PrivateRoute>
+          <Route path="/destination/">
+          <NoSelect></NoSelect>
+          </Route>
           <Route path="/blog">
           <Blog></Blog>
         </Route>
